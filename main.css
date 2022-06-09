@@ -1,0 +1,114 @@
+body{
+    text-shadow: 1px 1px 2px black;
+    color:white;
+    margin-top: 30px;
+}
+
+.info{
+    background-color: rgb(5, 98, 175);
+    margin:0 auto;
+    border-radius: 10px;
+    width: 35%;
+    border: 1px solid black;
+
+
+}
+.header{
+    margin-top: 30px;
+    height: 10vh;
+    display: flex;    
+    justify-content: space-around;
+}
+.header img{
+    width: 20px;
+    height: 20px;
+}
+.header select{
+    width: 100px;
+    height: 25px;
+}
+.sun{
+    text-align: center;
+}
+.weatherImg img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.infoBlock{
+    border-radius: 20px;
+    width:253px;
+    height:253px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(255, 255, 255, 0.3);  
+}
+
+select{
+   background-color: transparent;
+   border: none;
+}
+.temp{
+    color:white;
+    font-size: 50px;
+    height: fit-content;
+    width: fit-content;
+    margin-top: 10px;
+    font-family: 'Overpass', sans-serif;
+}
+.dateBlock{
+    display: flex;
+    justify-content: center;
+    margin-top:20px;
+}
+.mainTemp{
+    display: flex;
+    justify-content: center;  
+}
+
+.desc{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    color:white;
+}
+.windAll{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.rainAll{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.weekWeather button{
+    display: flex;
+    border-radius: 10px;
+    width: 200px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: none;
+}
+.weekWeather button p{
+    color:#444E72;
+}
+
+.weekWeather a{
+    text-decoration: none;
+}
+.weekWeatherObsh{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+

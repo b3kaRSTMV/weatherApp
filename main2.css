@@ -1,0 +1,129 @@
+body{
+    font-family: 'Overpass', sans-serif;
+    text-shadow: 1px 1px 2px black;
+    color:white;
+}
+.prognozBlock{
+    background-color: rgb(5, 98, 175);
+    margin:0 auto;
+    border-radius: 10px;
+    width: 35%;
+}
+header{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    height: 10vh;
+}
+.leftHeader{
+    align-items: center;
+    display: flex; 
+}
+.leftHeader a{
+    display: flex;
+    align-items: center;
+    color:white;
+    text-decoration: none;
+}
+.rightHeader{
+    display: flex;
+    align-items: center;    
+}
+
+
+
+
+.currentBlock{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+}
+.currentWeather{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.currentWeather img{
+    padding-left: 2px;
+    width: 43px;
+    height: 43px;
+}
+
+
+.day:hover{
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    transition: 0.25s;
+
+}
+.prognoz{
+    
+    width: 100%;
+    height: fit-content;
+    color:white;
+    
+}
+.prognoz p{
+    font-size: 20px;
+}
+.progHeader{
+    display: flex;
+    justify-content: space-between;
+}
+.listOfHours{
+    display: flex;
+    width: 100%;
+    overflow-x: auto; 
+}
+.listOfHours::-webkit-scrollbar{
+    height: 4px;
+    background-color: greenyellow;
+    border:1px solid black;
+    border-radius: 5px;
+}
+.listOfHours::-webkit-scrollbar-thumb{
+    background-color: black;
+    border-radius:5px
+}
+
+
+.day{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.daily img{
+    width: 50px;
+    height: 50px;
+}
+.weekDays{
+    display: flex;
+    height: 50px;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    color:white;  
+}
+.week{
+    overflow-x: auto;
+    height: 300px;
+}
+.week::-webkit-scrollbar{
+    height:4px;
+    width: 4px;
+    background-color: greenyellow;
+    border:1px solid black;
+    border-radius: 5px;
+}
+.week::-webkit-scrollbar-thumb{
+    background-color: black;
+    border-radius:4px
+}
