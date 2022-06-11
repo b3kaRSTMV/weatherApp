@@ -3,6 +3,9 @@ body{
     text-shadow: 1px 1px 2px black;
     color:white;
 }
+.page2{
+    display: none;
+}
 .prognozBlock{
     background-color: rgb(5, 98, 175);
     margin:0 auto;
@@ -17,7 +20,21 @@ header{
 }
 .leftHeader{
     align-items: center;
-    display: flex; 
+    display: flex;
+}
+#back{
+    color:white;
+    font-size:20px;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border:none;
+}
+.leftHeader img{
+    position: relative;
+    bottom: 2px;
 }
 .leftHeader a{
     display: flex;
