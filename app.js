@@ -1,36 +1,49 @@
 
-let Talas = {
-    lat:42.52277,
-    lon:72.24274
-}
-let Bishkek = {
-    lat:42.882004,
-    lon:74.582748
-}
-let IK = {
-    lat:42.416668,
-    lon:77.250000
-}
-let JB = {
-    lat:40.933155,
-    lon:72.981491
-}
-let Batken = {
-    lat:40.06259,
-    lon:70.81939
-}
-let Naryn = {
-    lat:41.42866,
-    lon:75.99111
-}
-let Osh = {
-    lat:40.513996,
-    lon:72.816101
-}
-
-
+let $select = document.querySelector('select')
 const key = '4ec1048d61ca67c80e2b85f876f3155d'
-const url1=`https://api.openweathermap.org/data/2.5/onecall?lat=${IK.lat}&lon=${IK.lon}8&lang=ru&units=metric&appid=${key}`
+let all = [
+    {
+        lat:42.882004,
+        lon:74.582748  
+    },
+    {
+        lat:42.52277,
+        lon:72.24274
+    },
+    {
+        lat:41.42866,
+        lon:75.99111
+    },
+    {
+        lat:40.513996,
+        lon:72.816101
+    },
+    {
+        lat:40.06259,
+        lon:70.81939
+    },
+    {
+        lat:40.933155,
+        lon:72.981491
+    },
+    {
+        lat:40.933155,
+        lon:72.981491
+    }
+]
+$select.addEventListener('change', function(){
+    let index = $select.selectedIndex
+    lat = all[index].lat
+    lon = all[index].lon
+    let url1=`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&lang=ru&units=metric&appid=${key}`
+    manager(url1)
+    
+})
+
+let lat = all[0].lat
+let lon = all[0].lon
+let url1=`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&lang=ru&units=metric&appid=${key}`
+manager(url1)
 
 let $option = document.querySelector('option')
 let $desc = document.querySelector('.desc')
@@ -49,6 +62,7 @@ fetch(url1)
     $desc.textContent = `${data.current.weather[0].description}`
     $windSpeed.textContent = `${Math.ceil(Number(data.current.wind_speed))} км/ч`;
     $probability.textContent = `${data.current.humidity}%`
+    $weatherImg.innerHTML = ''
     $weatherImg.insertAdjacentHTML('beforeend', `<img src="http://openweathermap.org/img/wn/${data.current.weather[0].icon}@2x.png" alt="" />`)
 
 })  
@@ -142,6 +156,7 @@ fetch(url1)
     console.log(data)
     $dat.textContent = new Date().toLocaleDateString('ru-RU', {day:'2-digit',month:'long'});
     let $listOfHours = document.querySelector('.listOfHours')
+    $listOfHours.innerHTML = ''
     data.hourly.forEach((element, i) => {
     $listOfHours.insertAdjacentHTML('beforeend',`
     <div class='day'>
@@ -152,6 +167,7 @@ fetch(url1)
     `)
 });
     data.daily.forEach((element, i)=>{
+    $daily.innerHTML = ''
     $daily.insertAdjacentHTML('beforeend',`
     <div class = 'weekDays'>
     <p>${new Date(element.dt * 1000).toLocaleDateString('ru-ru', {weekday: 'short'})}</p>
